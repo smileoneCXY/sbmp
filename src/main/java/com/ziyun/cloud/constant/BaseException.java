@@ -12,6 +12,10 @@ public class BaseException extends RuntimeException {
         this.resultCode = resultCode;
     }
 
+    public BaseException(String msg) {
+        super(msg);
+    }
+
     public BaseException(String message, ResultCode resultCode) {
         super(String.valueOf(resultCode.getCode()),new Throwable(resultCode.getMessage()));
         this.resultCode = resultCode;
